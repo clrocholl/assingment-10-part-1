@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC%7CMontserrat%7CRoboto">
+  <title>Lesson 10 Assignment pt. 1</title>
+  <style>
+    .blueText {
+      color: #006994;
+      font-family: "Montserrat";
+    }
+
+    .titleText {
+      color: #4E78A0;
+      font-family: "Roboto";
+    }
+  </style>
+  <script>
+    function init() {
+      var sky = document.getElementById("intro");
+      sky.setAttribute("class", "blueText");
+
+      var styledTitle = document.getElementById("title");
+      styledTitle.setAttribute("class", "titleText");
+
+      var theImage = document.getElementById("starry-sky");
+      var theAlt = document.getElementById("starry-sky").alt = "photograph of the milky way";
+      var theDiv = document.getElementById("background");
+      console.log(theDiv); // or console.dir(theDiv)?
+      console.log("The Alt text is: ", theAlt);
+    }
+    window.onload = init;
+  </script>
+</head>
+
+<body>
+  <div id="background">
+    <h1 id="title">Background Images</h1>
+    <p id="intro">This is the "Starry Sky", one of the most stunning background photographs.</p>
+    <img id="starry-sky" src="images/milky-way.jpg" width="600" height="450">
+  </div>
+</body>
+
+</html>
